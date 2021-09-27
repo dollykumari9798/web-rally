@@ -1,0 +1,333 @@
+:root{
+    --text-color1: #000;
+    --light-green:#ebfbea;
+    --mild-green: #c6edd2;
+}
+
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* -------------- HEADER STARTS --------------*/
+header{
+    position: relative;
+}
+  /* Navbar CSS Start */
+  .navbar { 
+    padding: 0;
+    /* background:  var(--light-green); */
+    position: relative;
+    transition: 0.5s;
+    z-index: 999;
+  }
+  .navbar-nav {
+    margin-left: auto;
+  }
+  .nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar .navbar-brand {
+    background: var(--light-green) ;
+    margin: 0;
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 0px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+  }
+  
+  .navbar .navbar-brand span {
+    background:  var(--light-green);  
+    color: #343148;
+    text-transform: lowercase;
+    transition: 0.5s;
+  }
+  
+  .navbar.nav-sticky .navbar-brand span {
+    background:  var(--light-green);
+    color: #ffffff;
+  }
+  
+  .navbar .navbar-brand img {
+    height: 60px;
+    width: 80px; 
+    margin: -10px 5px;
+  }
+  
+  .navbar-light .navbar-nav .nav-link,
+  .navbar-light .navbar-nav .nav-link:focus,
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active {
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    align-items: center;
+    
+    /* color: #000000; */
+  }
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active {
+    border-radius: 10px;
+    background: rgba(256, 256, 256, 0.3);
+    transition: none;
+    background: var(--mild-green);
+  }
+  
+  .navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    /* background: #f8f9fa; */
+  }
+  #logoname img{
+   height: 60px;
+   width: 320px;
+  }
+  
+/* Navbar CSS End */
+
+/* Carousel starts */
+
+.carousel-inner .carousel-item{
+    width: 100vw;
+    height: 500px !important;
+}
+
+
+/* Carousel ends */
+.body{
+  background: var(--light-green);
+  padding: 70px 140px;
+  padding-bottom: 20px;
+}
+.body h1{
+  padding-left: 7px;
+  font-size: 60px;
+  font-family: Lobster, cursive;
+}
+.custom-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.381);
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding-left: 80px;
+}
+.custom-text #my-heading{
+    font-size: 80px !important;
+    
+}
+.custom-text span{
+    display: flex;
+    flex-direction: row;
+    /* line-height: 50px; */
+    font-size: 30px;
+    color: #ebfbea;
+}
+
+.my-cursor{
+    color: transparent !important;
+    height: 50px;
+    width: 20px;
+    font-weight:lighter;
+    margin-left: 3px;
+    width: fit-content;
+    animation: blink 0.8s infinite;
+}
+@keyframes blink {
+    0%,50%{
+        background-color: transparent;
+        
+    }
+    51%,100%{
+        background: #ebfbea;
+    }
+}
+/* -------------- HEADER ENDS --------------*/
+
+/* -------------- FOOTER STARTS -------------- */
+footer{
+  position: relative;
+  padding: 40px 140px; 
+  background: #d3f5ce;
+}
+footer h1{
+  font-family: Lobster, cursive;
+}
+#social-links .links{
+  text-decoration: none;
+}
+#social-links a span {
+  color: #fff ;
+  border-radius: 5px;
+  padding: 5px;
+  background: #007b5f;
+  border: 1px solid #007b5f;
+}
+.contact .my-btn{
+  margin-top: 20px;
+  color: #fff;
+  background: #007b5f;
+}
+.menu{
+  list-style: none;row-gap: 20px;
+}
+.menu-item{
+  text-decoration: none;
+  color: #007bff;
+  font-family: serif;
+  font-size: 1rem;
+  
+}
+.maps iframe{
+  height: 250px;
+  width: 600px;
+}
+/* -------------- FOOTER ENDS -------------- */
+
+/* -------------- media queries starts--------------*/
+@media (min-width:800px) and (max-width: 1200px){
+
+  .body{
+    padding-left: 80px ;
+    padding-right: 80px ;
+  }
+  footer{
+    padding-left: 80px ;
+    padding-right: 80px ;
+  }
+  footer .maps iframe{
+    height: 200px;
+    width: 350px;
+  }
+
+}
+
+@media (min-width:600px) and (max-width: 800px){
+  .body{
+    padding-left: 50px ;
+    padding-right: 50px ;
+  }
+  footer{
+    padding-left: 50px ;
+    padding-right: 50px ;
+  }
+  .my-footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .my-footer div{
+    margin-bottom: 20px;
+  }
+  footer .maps iframe{
+    height: 200px;
+    width: 350px;
+  }
+}
+@media (min-width:500px) and (max-width: 600px){
+  .body{
+    padding-left: 50px ;
+    padding-right: 50px ;
+  }
+  footer{
+    padding-left: 50px ;
+    padding-right: 50px ;
+  }
+    .navbar .navbar-brand img{
+        height: 50px;
+        width: 60px; 
+        margin: -10px 0px;
+    }
+    #logoname img{
+        height: 50px;
+        width: 220px;
+        margin-left: -40px;
+    }
+    .custom-text{
+       padding-left: 10px;
+    }
+    .custom-text  #my-heading{
+        font-size: 45px;
+    }
+    .custom-text  span{
+        font-size: 25px;
+    }
+    .my-footer{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    footer .maps iframe{
+      height: 200px;
+      width: 350px;
+    }
+    .my-footer div{
+      margin-bottom: 20px;
+    }
+}
+@media (min-width:400px) and (max-width: 500px){
+  .body{
+    padding-left: 20px ;
+    padding-right: 20px ;
+  }
+  .body #vision p,code,ul li{
+    font-size: 25px;
+  }
+  .body h1{
+    font-size: 50px;
+  }
+  footer{
+    padding-left: 20px ;
+    padding-right: 20px ;
+  }
+    .navbar .navbar-brand img{
+        height: 50px;
+        width: 60px; 
+        margin: -10px 0px;
+    }
+    #logoname img{
+        height: 50px;
+        width: 220px;
+        margin-left: -40px;
+    }
+    .custom-text{
+       padding-left: 10px;
+    }
+    .custom-text  #my-heading{
+        font-size: 45px;
+    }
+    .custom-text  span{
+        font-size: 25px;
+    }
+    .my-footer{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    footer .maps iframe{
+      height: 200px;
+      width: 350px;
+    }
+    .my-footer div{
+      margin-bottom: 20px;
+    }
+    .table thead tr th{
+      padding: 5px;
+    }
+    .table body tr th{
+      padding: 5px;
+    }
+}
+/* -------------- media queries ends--------------*/
